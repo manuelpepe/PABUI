@@ -26,7 +26,7 @@
 <Router>
 
 <header>
-	<h1>PyAutoBlockchain</h1>
+	<h2>PyAutoBlockchain</h2>
 	<p>Project: {project}</p>
 </header>
 
@@ -40,8 +40,6 @@
 
 
 <main>
-
-	
 	<Route path="tasks">
 		<TasksView />
 	</Route>
@@ -60,5 +58,21 @@
 <style>
 main {
 	width: 70%;
+}
+
+header {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h2 {
+	margin: 0;
+}
+
+.sidebar {
+    margin-bottom: 1em;
 }
 </style>

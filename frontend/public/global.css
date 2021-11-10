@@ -9,3 +9,18 @@ body {
 	flex-direction: column;
 	align-items: center;
 }
+
+.controls {
+	display: flex;
+	flex-direction: column;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.row > * {
+	margin-right: 0.5em;
+}

@@ -29,15 +29,22 @@
     updateDirty()
 </script>
 
-<div style="color: {dirty ? 'red' : 'green'}; display: block">
-    {dirty ? 'Changes found' : 'No changes'}
+<div class="controls">
+    <div class="row">
+        <button on:click="{saveTasksAndUpdateMessage}" disabled={!dirty}>Save into tasks.json</button>
+        <span style="color: {dirty ? 'red' : 'green'}">
+            {dirty ? 'Changes found' : 'No changes'}
+        </span>
+    </div>
+
+    <div class="row">
+        {#if message}
+            {message}
+        {/if}
+    </div>
 </div>
 
-<button on:click="{saveTasksAndUpdateMessage}">Save</button>
 
-{#if message}
-    {message}
-{/if}
 
 <div>
     {#if tasks}

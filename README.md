@@ -26,7 +26,7 @@ A Web-based GUI for PAB development
 ```
 
 
-## Developing
+## Development
 
 After cloning the repo and installing all dependencies, make sure to install the pre-commit hooks for the
 automatic formatter (see black):
