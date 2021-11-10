@@ -9,9 +9,8 @@ A Web-based GUI for PAB development
 * Read and edit configs
 * Read, edit and create tasks
 * List strategies and parameters
+* List, add and remove contracts
 * Create/Restore private key
-* Add new contracts
-* List current contracts and ABIs
 
 
 ## Running the UI

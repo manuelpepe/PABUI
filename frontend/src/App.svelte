@@ -2,14 +2,16 @@
 	import { Router, Route, Link } from "svelte-navigator";
 	import TasksView from './views/tasks/TasksView.svelte';
 	import ConfigsView from './views/config/ConfigView.svelte';
-	import { loadConfig, loadTasks, loadStrategies } from "./rest";
+	import ContractsView from "./views/contracts/ContractsView.svelte";
 	import StrategiesView from "./views/strategies/StrategiesView.svelte";
+	import { loadConfig, loadTasks, loadStrategies, loadContracts } from "./rest";
 
 	let project;
 
 	loadConfig()
 	loadTasks();
 	loadStrategies();
+	loadContracts();
 
 	fetch("/api/app/get")
 	.then(async (res) => {
@@ -34,6 +36,7 @@
 	<nav>
 		<Link to="/tasks">Tasks</Link>
 		<Link to="/config">Config</Link>
+		<Link to="/contracts">Contracts</Link>
 		<Link to="/strategies">Strategies</Link>
 	</nav>
 </aside>
@@ -46,7 +49,9 @@
 	<Route path="config">
 		<ConfigsView/>
 	</Route>
-	
+	<Route path="contracts">
+		<ContractsView/>
+	</Route>
 	<Route path="strategies">
 		<StrategiesView/>
 	</Route>

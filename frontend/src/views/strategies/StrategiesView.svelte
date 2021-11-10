@@ -4,7 +4,7 @@
 </script>
 
 <div>
-    {#each Object.entries($strategies) as [name, params]}
-        <Strategy {name} params={params} />
+    {#each Object.entries($strategies) as [name, data]}
+        <Strategy {name} params={data["params"]} doc={data["doc"]} />
     {/each}
 </div>

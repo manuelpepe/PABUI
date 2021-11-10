@@ -4,7 +4,7 @@
 	import { deepEqual, recursiveDictFlatten } from '../../utils';
     import { onMount } from 'svelte';
 	import { get } from "svelte/store";
-import InputField from '../../components/InputField.svelte';
+    import InputField from '../../components/InputField.svelte';
 
     let dirty = false;
     let message = null;

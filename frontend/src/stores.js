@@ -35,4 +35,5 @@ function createCheckpointStore(value) {
 
 export const tasks = createCheckpointStore([]);
 export const config = createCheckpointStore({});
+export const contracts = writable([]);
 export const strategies = writable([]);

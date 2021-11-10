@@ -1,5 +1,5 @@
 import { get } from 'svelte/store';
-import { tasks, config, strategies } from './stores';
+import { tasks, config, strategies, contracts } from './stores';
 
 
 export async function loadTasks() {
@@ -62,3 +62,17 @@ export async function loadStrategies() {
         }
     });
 }
+
+
+export async function loadContracts() {
+    return fetch("/api/contracts/get")
+    .then(async res => {
+        if (res.ok) {
+            let data = await res.json();
+            contracts.set(data, true);
+        } else {
+            console.log(res);
+        }
+    });
+}
+
