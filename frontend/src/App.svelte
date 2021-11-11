@@ -34,10 +34,14 @@
 
 <aside class="sidebar">
 	<nav>
-		<Link to="/tasks">Tasks</Link>
-		<Link to="/config">Config</Link>
-		<Link to="/contracts">Contracts</Link>
-		<Link to="/strategies">Strategies</Link>
+		<Link class="navlink" to="/tasks">Tasks</Link>
+		<Link class="navlink" to="/config">Config</Link>
+		<Link class="navlink" to="/contracts">Contracts</Link>
+		<Link class="navlink" to="/strategies">Strategies</Link>
+	</nav>
+	<nav>
+		<a class="navlink" href="https://github.com/manuelpepe/PyAutoBlockchain" target="_blank" rel="noopener noreferrer">PAB</a>
+		<a class="navlink" href="https://github.com/manuelpepe/PABUI" target="_blank" rel="noopener noreferrer">PABUI</a>
 	</nav>
 </aside>
 
@@ -78,6 +82,17 @@ header h2 {
 }
 
 .sidebar {
-    margin-bottom: 1em;
+	margin-bottom: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar nav {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 15%;
 }
 </style>
