@@ -2,9 +2,21 @@
     export let taskIndex;
     
     import Collapsible from '../../components/Collapsible.svelte';
-    import { tasks } from '../../stores';
+    import { tasks, strategies, contracts } from '../../stores';
 
 </script>
+
+<datalist id="contracts">
+    {#each Object.keys($contracts) as name}
+        <option value={name}/>
+    {/each}
+</datalist>
+
+<datalist id="strategies">
+    {#each Object.keys($strategies) as name}
+        <option value={name}/>
+    {/each}
+</datalist>
 
 <Collapsible name={$tasks[taskIndex].name}>
     <div class="field">
@@ -13,6 +25,7 @@
             bind:value={$tasks[taskIndex].strategy}
             type="text"
             name="strategy"
+            list="strategies"
         />
     </div>
 
@@ -23,6 +36,7 @@
                 bind:value={$tasks[taskIndex].params[param]}
                 type="text"
                 name="param-{param}"
+                list="contracts"
             />
         </div>
     {/each}
