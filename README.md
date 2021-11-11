@@ -1,6 +1,6 @@
 # PAB UI
 
-A Web-based GUI for PAB development
+A Web-based GUI for PAB development. Check out [PAB here!](https://github.com/manuelpepe/PyAutoBlockchain)
 
 
 ## Features
