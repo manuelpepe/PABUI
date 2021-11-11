@@ -10,4 +10,12 @@ setup(
         'flask',
         'PyAutoBlockchain'
     ],
+    entry_points={
+        'console_scripts': [
+            "pabui=pabui:run"
+        ]
+    },
+    package_data={
+        'pabui': ['static/*', 'templates/*']
+    }
 )

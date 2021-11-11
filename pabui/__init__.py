@@ -45,5 +45,12 @@ def register_commands(app):
     from . import commands
 
 
+def run():
+    import argparse
+    parser = argparse.ArgumentParser("pabui")
+    parser.add_argument("-p", "--port", default=5000, type=int)
+    args = parser.parse_args()
+    create_app().run(host="0.0.0.0", port=args.port)
+
 if __name__ == "__main__":
     create_app().run(host="0.0.0.0")

@@ -14,10 +14,10 @@ bp = Blueprint(
 @bp.route("/<path:path>")
 def index(path):
     """Route for index page."""
-    return send_from_directory("../frontend/public", "index.html")
+    return send_from_directory("templates", "index.html")
 
 
 @bp.route("/staticd/<path:subpath>", strict_slashes=False)
 def static_files(subpath):
     """ Route for static resources."""
-    return send_from_directory("../frontend/public", subpath)
+    return send_from_directory("static", subpath)
