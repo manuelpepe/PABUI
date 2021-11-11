@@ -16,14 +16,12 @@ A Web-based GUI for PAB development. Check out [PAB here!](https://github.com/ma
 ## Running the UI
 
 ```bash
-	$ git clone https://github.com/manuelpepe/PABUI 
-	$ python3 -m venv venv
-	$ . venv/bin/activate
-	$ pip install .
-	$ cd ~/MyPABProject
-	$ pabui  # TODO: Implement this command.
+	$ pip install pabui
+	$ pabui
 ```
 
+The UI loads the PAB project in the current working directory, so you have to run `pabui`
+from the directory with your `config.json`, `tasks.json` and such. 
 
 ## Development
 
