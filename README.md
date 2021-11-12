@@ -1,5 +1,7 @@
 # PAB UI
 
+[![Tests](https://github.com/manuelpepe/PABUI/actions/workflows/python-app.yml/badge.svg)](https://github.com/manuelpepe/PyAutoBlockchain/actions/workflows/python-app.yml)
+
 A Web-based GUI for PAB development. Check out [PAB here!](https://github.com/manuelpepe/PyAutoBlockchain)
 
 
